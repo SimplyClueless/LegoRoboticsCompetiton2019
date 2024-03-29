@@ -148,7 +148,7 @@ function WaterTower() {
             while (GetRightReflected() > 60) {
                 mainMotors.tank(10, 10, .5, MoveUnit.Seconds);
             }
-            ainMotors.tank(0, 20, 1.65, MoveUnit.Seconds);
+            mainMotors.tank(0, 20, 1.65, MoveUnit.Seconds);
         }
     }
 }
@@ -185,8 +185,7 @@ function GetSensorDifference() {
 }
 
 function GetDirection() {
-    const Direction = GetSensorDifference() * SHARPNESS;
-    return Direction;
+    return GetSensorDifference() * SHARPNESS;
 }
 
 function PrintValues() {
